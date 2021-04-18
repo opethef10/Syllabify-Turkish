@@ -7,7 +7,7 @@ A simple Javascript program which divides a Turkish sentence into its syllables.
 Turkish syllabication rules are fairly easy.  
 - There is only one vowel in each syllable  
 - Consonants surround the sole vowel in the syllable in these ways: (C for consonant, V for vowel)
-    - In Turkish origin words, the maximal syllable structure is (C)V(C)(C)
+    - In Turkish origin words, the maximal syllable structure is **(C)V(C)(C)**
     - Examples: 
         - a
         - da
@@ -24,7 +24,7 @@ Turkish syllabication rules are fairly easy.
         - stres
      - Due to the nature of Turkish syllabication, despite not being a word/syllable in real life, this is theoretically allowed in the algorithm:
         - sdfdsgahghdfghg
- - Although Turkish words can take multiple final consonants, the possibilities are limited. Multi-syllable words are syllabified to have C.CV or V.CV syllable splits, C.V split is disallowed, V.V split is only found in rare specific occurrences.
+ - Although Turkish words can take multiple final consonants, the possibilities are limited. Multi-syllable words are syllabified to have **C.CV** or **V.CV** syllable splits, **C.V** split is disallowed, **V.V** split is only found in rare specific occurrences.
  - That is, unless there are two adjacent vowels, next syllable must start with a consonant.
  - Examples:
      - ab.la
@@ -45,7 +45,8 @@ The "?" in the pattern ensures that second syllable begins with a consonant unle
 This pattern splits a word into two parts: First syllable and the rest of the word.  
 Then the algorithm recursively syllabify the rest of the word until the termination condition which is, the rest of the word has only one vowel.  
 
-Basic function for syllabication is as follows:    
+Basic function for syllabication is as follows:  
+(Guard checks for invalid input are added in the file)  
 ```javascript
 let pattern = /([bcçdfgğhjklmnprsştvyz]*[aıoueiöüİ][bcçdfgğhjklmnprsştvyz]*?)([bcçdfgğhjklmnprsştvyz]?[aıoueiöüİ].*)/i;
 
@@ -58,4 +59,5 @@ function syllabify(partition){
 ```
 
 ## Screenshots
+An example sentence (which is the first line of Turkish National Anthem) is divided into its syllables.  
 ![](screenshot.png)
