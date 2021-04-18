@@ -1,5 +1,6 @@
 # hecele
 A simple Javascript program which divides a Turkish sentence into its syllables.  
+Use [this link](https://raw.githack.com/opethef10/hecele/main/hecele.html) for HTML page
 
 ## How it works
 
