@@ -1,6 +1,6 @@
-# hecele
+# Syllabify Turkish
 A simple Javascript program which divides a Turkish sentence into its syllables.  
-Use [this link](https://raw.githack.com/opethef10/hecele/main/hecele.html) for HTML page
+Use [this link](https://raw.githack.com/opethef10/Syllabify-Turkish/main/syllabifyTurkish.html) for HTML page
 
 ## How it works
 
@@ -40,7 +40,7 @@ Turkish syllabication rules are fairly easy.
 
 ### Algorithm
 Therefore the syllabication pattern can be represented in one regular expression:  
-- `(C*VC*?)(C?V.*)` where C is `[bcçdfgğhjklmnprsştvyz]` V is `[aıoueiöüİ]`  
+- `(C*VC*?)(C?V.*)` where C is `[bcçdfgğhjklmnprsştvyz]` V is `[aıoueiöü]`  
 
 The "?" in the pattern ensures that second syllable begins with a consonant unless there are adjacent vowels in the word.   
 This pattern splits a word into two parts: First syllable and the rest of the word.  
@@ -49,13 +49,12 @@ Then the algorithm recursively syllabify the rest of the word until the terminat
 Basic function for syllabication is as follows:  
 (Guard checks for invalid input are added in the file)  
 ```javascript
-let pattern = /([bcçdfgğhjklmnprsştvyz]*[aıoueiöüİ][bcçdfgğhjklmnprsştvyz]*?)([bcçdfgğhjklmnprsştvyz]?[aıoueiöüİ].*)/i;
+const PATTERN = /([bcçdfgğhjklmnprsştvyz]*[aıoueiöü][bcçdfgğhjklmnprsştvyz]*?)([bcçdfgğhjklmnprsştvyz]?[aıoueiöü].*)/
 
-function syllabify(partition){
-    matched = partition.match(pattern);
-    if (!matched) 
-        return partition;
-    return matched[1] + "-" + syllabify(matched[2]);
+function syllabifyWord(partition){
+	if (matched = partition.match(PATTERN))
+		return matched[1] + '-' + syllabifyWord(matched[2])
+	return partition
 }
 ```
 
