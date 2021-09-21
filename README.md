@@ -2,7 +2,7 @@
 :point_right: [Readme in English](README_EN.md)
 
 Türkçe'yi hecelerine ayıran basit bir JavaScript programı.
-[Bu linki](https://raw.githack.com/opethef10/Syllabify-Turkish/main/syllabifyTurkish.html) for kullanarak deneyebilirsiniz.
+[Bu linki](https://raw.githack.com/opethef10/Syllabify-Turkish/main/syllabifyTurkish.html) kullanarak deneyebilirsiniz.
 
 ## Nasıl Çalışır?
 
@@ -42,7 +42,9 @@ Türkçe'yi heceleme kuralları oldukça basittir.
 
 ### Algoritma
 Yukardaki kurallara dayanarak, Türkçe heceleme kuralını tek düzenli ifadede tanımlayabiliriz: 
-- `(C*VC*?)(C?V.*)` Burdaki C'nin yerine `[bcçdfgğhjklmnprsştvyz]` V'nin yerine de `[aıoueiöü]` gelecek.
+- `(C*VC*?)(C?V.*)` 
+ - Buradaki C'nin yerine `[bcçdfgğhjklmnprsştvyz]` 
+ - V'nin yerine de `[aıoueiöü]` gelecek.
 
 Desendeki "?", yan yana iki ünlü olmadığı sürece ikinci hecenin ünsüzle başlamasını garanti eder.
 Bu desen sözcüğü iki kısma böler: İlk hece ve sözcüğün gerisi. Ardından algoritma sonlandırma koşuluna (sözcüğün geri kalan kısmında tek ünlü olması) ulaşana dek yinelengen (rekürsif) bir biçimde sözcüğü heceler.

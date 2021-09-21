@@ -9,15 +9,15 @@
   </head>
   <body>
     <div>
-      <input type="button" value='Temizle' onclick="t1.value = ''; t2.value = '';"/>
+      <input type="button" value='Clear / Temizle' onclick="t1.value = ''; t2.value = '';"/>
     </div>
     <table>
       <tr>
-        <td><b>SENTENCE: </b></td>
-        <td><textarea id="t1" name="t1" onkeyup="t2.value = syllabifySentence(t1.value);" placeholder = "Please enter a sentence"></textarea></td>
+        <td><b>SENTENCE / CÜMLE: </b></td>
+        <td><textarea id="t1" name="t1" onkeyup="t2.value = syllabifySentence(t1.value);" placeholder = "Please enter a sentence / Bir cümle yazınız"></textarea></td>
       </tr>
       <tr>
-        <td><b>SYLLABIFIED: </b></td>
+        <td><b>SYLLABIFIED / HECELENMİŞ: </b></td>
         <td><textarea id="t2" name="t2" onkeyup=""></textarea></td>
       </tr>
     </table>
