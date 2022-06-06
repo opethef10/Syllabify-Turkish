@@ -47,7 +47,7 @@ Yukardaki kurallara dayanarak, Türkçe heceleme kuralını tek düzenli ifadede
  - V'nin yerine de `[aıoueiöü]` gelecek.
 
 Desendeki "?", yan yana iki ünlü olmadığı sürece ikinci hecenin ünsüzle başlamasını garanti eder.
-Bu desen sözcüğü iki kısma böler: İlk hece ve sözcüğün gerisi. Ardından algoritma sonlandırma koşuluna (sözcüğün geri kalan kısmında tek ünlü olması) ulaşana dek yinelengen (rekürsif) bir biçimde sözcüğü heceler.
+Bu desen sözcüğü iki kısma böler: İlk hece ve sözcüğün gerisi. Ardından algoritma sonlandırma koşuluna (sözcüğün geri kalan kısmında tek ünlü olması) ulaşana dek çağrınır (rekürsif) bir biçimde sözcüğü heceler.
 
 Heceleme fonksiyonunu basitçe şu şekilde oluşturabiliriz:
 (Yanlış girdilerin tespiti kod dosyası içerisinde ayrıca eklenmiştir.)
