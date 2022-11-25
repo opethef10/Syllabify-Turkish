@@ -3,7 +3,6 @@ const CONSONANTS = '[bcçdfgğhjklmnprsştvyz]'
 const PATTERN = new RegExp('(C*VC*?)(C?V.*)'.replace(/C/g, CONSONANTS).replace(/V/g, VOWELS))
 const UNACCEPTED = /[^aıoueiöübcçdfgğhjklmnprsştvyz ]/
 
-
 function syllabifySentence(sentence){
     sentence = sentence.replace(/[.,;:'"]/g,'').replace(/\s+/g,' ')
     if (UNACCEPTED.test(sentence))
