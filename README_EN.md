@@ -1,6 +1,6 @@
 # Syllabify Turkish
 A simple Javascript program which divides a Turkish sentence into its syllables.  
-Use [this link](https://raw.githack.com/opethef10/Syllabify-Turkish/main/syllabifyTurkish.html) for HTML page
+Use [this link](https://opethef10.github.io/Syllabify-Turkish/index.html) for HTML page
 
 ## How it works
 
