@@ -23,10 +23,26 @@ function setupClearButton() {
     });
 }
 
-// Initial setup
+// In language.js or script.js
+function getPreferredLanguage(fallback = 'en') {
+    // Check both navigator.languages (for modern browsers) and navigator.language
+    const languages = navigator.languages || [navigator.language || navigator.userLanguage];
+
+    // Check for Turkish variants first
+    const turkishVariants = ['tr', 'tr-TR', 'tr-CY'];
+    for (const lang of languages) {
+        if (turkishVariants.includes(lang.toLowerCase())) {
+            return 'tr';
+        }
+    }
+
+    // Fallback to English if no Turkish detected
+    return fallback;
+}
+
 window.onload = function () {
-    // Set default language
-    languageSelector.value = 'en';
+    // Set language based on user preference
+    languageSelector.value = getPreferredLanguage();
     changeLanguage();
 
     // Initialize event listeners
