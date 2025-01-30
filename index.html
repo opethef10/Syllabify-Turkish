@@ -18,20 +18,16 @@
     <div class="button-container">
         <input type="button" value='Clear' class="clear-btn" id="clearBtn"/>
     </div>
-    <table>
-        <tr>
-            <td><b id="sentenceLabel">SENTENCE:</b></td>
-            <td>
-                <textarea id="t1" name="t1" placeholder="Please enter a sentence"></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td><b id="syllabifiedLabel">SYLLABIFIED:</b></td>
-            <td>
-                <textarea id="t2" name="t2" disabled></textarea>
-            </td>
-        </tr>
-    </table>
+    <div class="input-container">
+        <div class="input-group">
+            <label for="t1" id="sentenceLabel">SENTENCE:</label>
+            <textarea id="t1" name="t1" placeholder="Please enter a sentence"></textarea>
+        </div>
+        <div class="input-group">
+            <label for="t2" id="syllabifiedLabel">SYLLABIFIED:</label>
+            <textarea id="t2" name="t2" disabled></textarea>
+        </div>
+    </div>
 </div>
 <script src="language.js" charset="utf-8"></script>
 <script src="script.js" charset="utf-8"></script>
