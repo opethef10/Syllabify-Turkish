@@ -84,6 +84,11 @@ textarea:focus {
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
 }
 
+textarea:disabled {
+    background: #f0f4f8; /* Lighter background color */
+    color: #7f8c8d; /* Slightly lighter text color */
+}
+
 textarea::placeholder {
     color: #95a5a6;
     font-style: italic;
