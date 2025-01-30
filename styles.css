@@ -71,7 +71,7 @@ textarea {
     flex:1;
     min-width: 0; /* Allows textarea to shrink below default width */
     width: 100%;
-    height: 150px;
+    height: 200px;
     padding: 1rem;
     font-size: 1.1rem;
     border: 2px solid #bdc3c7;
@@ -154,6 +154,7 @@ textarea::placeholder {
 
     textarea {
         width: 100%;
+        height: 300px;
         margin-left: 0;
     }
 }
