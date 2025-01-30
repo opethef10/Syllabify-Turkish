@@ -1,26 +1,32 @@
 <html>
   <head>
-    <style>
-      div {text-indent:360px;}
-      table   {border:0px;}
-      td    {border:0px;}
-      textarea {font-size:20px; width:600px; height:150px;}
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabify Turkish</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div>
-      <input type="button" value='Clear / Temizle' onclick="t1.value = ''; t2.value = '';"/>
+  <div class="container">
+    <h1>Syllabify Turkish</h1>
+    <div class="button-container">
+      <input type="button" value='Clear / Temizle' class="clear-btn" onclick="t1.value = ''; t2.value = '';"/>
     </div>
     <table>
       <tr>
         <td><b>SENTENCE / CÜMLE: </b></td>
-        <td><textarea id="t1" name="t1" onkeyup="t2.value = syllabifySentence(t1.value);" placeholder = "Please enter a sentence / Bir cümle yazınız"></textarea></td>
+        <td>
+          <textarea id="t1" name="t1" onkeyup="t2.value = syllabifySentence(t1.value);"
+                    placeholder="Please enter a sentence / Bir cümle yazınız"></textarea>
+        </td>
       </tr>
       <tr>
         <td><b>SYLLABIFIED / HECELENMİŞ: </b></td>
-        <td><textarea id="t2" name="t2" onkeyup=""></textarea></td>
+        <td>
+          <textarea id="t2" name="t2" onkeyup="" disabled></textarea>
+        </td>
       </tr>
     </table>
-    <script src="syllabifyTurkish.js" charset="utf-8"></script>
+  </div>
+  <script src="syllabifyTurkish.js" charset="utf-8"></script>
   </body>
 </html>
