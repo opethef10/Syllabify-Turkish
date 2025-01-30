@@ -1,32 +1,40 @@
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syllabify Turkish</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-  <div class="container">
+</head>
+<body>
+<div class="container">
     <h1>Syllabify Turkish</h1>
+    <div class="language-selector">
+        <label for="language" id="languageLabel">Change Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="tr">Turkish</option>
+        </select>
+    </div>
     <div class="button-container">
-      <input type="button" value='Clear / Temizle' class="clear-btn" onclick="t1.value = ''; t2.value = '';"/>
+        <input type="button" value='Clear' class="clear-btn" onclick="clearInputs()" id="clearBtn"/>
     </div>
     <table>
-      <tr>
-        <td><b>SENTENCE / CÜMLE: </b></td>
-        <td>
-          <textarea id="t1" name="t1" onkeyup="t2.value = syllabifySentence(t1.value);"
-                    placeholder="Please enter a sentence / Bir cümle yazınız"></textarea>
-        </td>
-      </tr>
-      <tr>
-        <td><b>SYLLABIFIED / HECELENMİŞ: </b></td>
-        <td>
-          <textarea id="t2" name="t2" onkeyup="" disabled></textarea>
-        </td>
-      </tr>
+        <tr>
+            <td><b id="sentenceLabel">SENTENCE:</b></td>
+            <td>
+        <textarea id="t1" name="t1" onkeyup="t2.value = syllabifySentence(t1.value);"
+                  placeholder="Please enter a sentence"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><b id="syllabifiedLabel">SYLLABIFIED:</b></td>
+            <td>
+                <textarea id="t2" name="t2" onkeyup="" disabled></textarea>
+            </td>
+        </tr>
     </table>
-  </div>
-  <script src="syllabifyTurkish.js" charset="utf-8"></script>
-  </body>
+</div>
+<script src="language.js" charset="utf-8"></script>
+<script src="syllabifyTurkish.js" charset="utf-8"></script>
+</body>
 </html>
