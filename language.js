@@ -39,16 +39,3 @@ function changeLanguage() {
     // Update placeholders
     document.getElementById('t1').placeholder = translation.sentencePlaceholder;
 }
-
-// Function to clear inputs
-function clearInputs() {
-    document.getElementById('t1').value = '';
-    document.getElementById('t2').value = '';
-}
-
-// Initial language setup
-window.onload = function () {
-    // Set default language
-    document.getElementById('language').value = 'en';
-    changeLanguage();
-};
