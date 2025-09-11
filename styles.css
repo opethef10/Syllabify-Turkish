@@ -158,3 +158,9 @@ textarea::placeholder {
         margin-left: 0;
     }
 }
+
+footer {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
