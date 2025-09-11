@@ -2,7 +2,7 @@
 :point_right: [Readme in English](README_EN.md)
 
 Türkçe'yi hecelerine ayıran basit bir JavaScript programı.
-[Bu linki](https://opethef10.github.io/Syllabify-Turkish/index.html) kullanarak deneyebilirsiniz.
+[Bu linki](https://syllabify.onurarikan.dev) kullanarak deneyebilirsiniz.
 
 ## Nasıl Çalışır?
 
