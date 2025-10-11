@@ -5,8 +5,7 @@ services:
     image: caddy
     container_name: ${PROJECT_SLUG}
     ports:
-      - "${PORT}:8000"
+      - "${PORT}:80"
     volumes:
-      - ./:/srv
-      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./:/usr/share/caddy
     restart: unless-stopped
