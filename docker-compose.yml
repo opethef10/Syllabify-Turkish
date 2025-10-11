@@ -1,0 +1,12 @@
+name: ${PROJECT_SLUG}
+
+services:
+  caddy:
+    image: caddy
+    container_name: ${PROJECT_SLUG}
+    ports:
+      - "${PORT}:8000"
+    volumes:
+      - ./:/srv
+      - ./Caddyfile:/etc/caddy/Caddyfile
+    restart: unless-stopped
