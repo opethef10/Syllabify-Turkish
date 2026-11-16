@@ -1,0 +1,11 @@
+{
+  "name": "syllabify-turkish",
+  "compatibility_date": "2026-11-16",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "syllabify.onurarikan.dev", "custom_domain": true }
+  ]
+}
